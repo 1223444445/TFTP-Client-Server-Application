@@ -5,16 +5,17 @@
 
 #include <stdint.h>
 #include <arpa/inet.h>
-#include<stdlib.h>
 
-//#define PORT 6969
+#define IP "127.0.0.1"
+#define PORT 6969
 #define BUFFER_SIZE 516  // TFTP data packet size (512 bytes data + 4 bytes header)
 #define TIMEOUT_SEC 5    // Timeout in seconds
 #define SUCCESS 1
 #define FAILURE 0
-#define DEFAULT 1
-#define OCTATE 2
-#define NETASCII 3
+#define DEFAULT 1// default mode
+#define OCTATE 2//octate mode
+#define NETASCII 3//NET ASCII mode
+
 
 // TFTP OpCodes
 typedef enum {
@@ -33,13 +34,12 @@ typedef struct {
     union {
         struct {
             char filename[256];
-            int mode; // mode of transfer
-            int opcode; // RRQ and WRQ
-            int connection;
-        } request;  // 
+            int mode;
+            int opcode;  // Typically "octet"
+        } request;  // RRQ and WRQ
         struct {
             uint16_t block_number;
-            char data[513];
+            char data[512];
             int data_size;
             int data_flag;
         } data_packet; // DATA
