@@ -1,0 +1,72 @@
+Name : Abinand V Nair
+
+description : The objective of this project was to implement a simple file transfer application based on the Trivial File Transfer Protocol (TFTP).
+              The project supports transferring files between a client and server using UDP sockets. It follows the TFTP protocol specifications 
+              for read and write requests, data packet transmission, acknowledgements, and error handling. The implementation ensures reliable file
+              transfer by managing block numbers, retransmissions, and proper termination of file transfer sessions.
+
+Sample Execution :         
+                Client : 
+                        Main Menu:
+                                1.Connect
+                                2.Put
+                                3.Get
+                                4.Mode
+                                5.Disconnect
+                        Enter Your Chioce: 1
+                        Enter IP address to connect: 127.0.0.1
+                        Enter PORT number: 6969
+                        IP ADDRESS VALIDATION SUCCESSFULL
+                        PORT NUMBER VALIDATION SUCCESSFULL
+                        CONNECTED TO SERVER
+                        Main Menu:
+                                1.Connect
+                                2.Put
+                                3.Get
+                                4.Mode
+                                5.Disconnect
+                        Enter Your Chioce: 4
+                        Enter Mode:
+                                1.Default
+                                2.Octate
+                                3.net ascii
+                        2
+                        TRANSFER MODE : OCTATE
+                        Main Menu:
+                                1.Connect
+                                2.Put
+                                3.Get
+                                4.Mode
+                                5.Disconnect
+                        Enter Your Chioce: 2
+                        Enter file name : 
+                        file.txt
+                        ACK FROM SERVER : FILE OPEN FOR PUT OPERATION SUCCESSFULL
+                        ACK FROM SERVER data size: 1 , Packet No: 1
+                        ACK FROM SERVER data size: 1 , Packet No: 2
+                        ACK FROM SERVER data size: 1 , Packet No: 3
+                        ACK FROM SERVER data size: 1 , Packet No: 4
+                        ACK FROM SERVER data size: 1 , Packet No: 5
+                        ACK FROM SERVER data size: 1 , Packet No: 6
+                        ACK FROM SERVER data size: 1 , Packet No: 7
+                        ACK FROM SERVER data size: 1 , Packet No: 8
+                        ACK FROM SERVER data size: 1 , Packet No: 9
+                        ACK FROM SERVER data size: 1 , Packet No: 10
+                        ACK FROM SERVER data size: 1 , Packet No: 11
+                        ACK FROM SERVER data size: 1 , Packet No: 12
+                        ACK FROM SERVER data size: 1 , Packet No: 13
+                        ACK FROM SERVER data size: 1 , Packet No: 14
+                    Main Menu:
+                            1.Connect
+                            2.Put
+                            3.Get
+                            4.Mode
+                            5.Disconnect
+                    Enter Your Chioce:      
+
+
+                Server :   
+                        TFTP Server listening on port 6969...
+                        SERVER WAITING FOR REQUEST...
+                        SEND ACK TO CLIENT FOR PUT OPERATION
+                        SERVER WAITING FOR REQUEST...       
